@@ -1,6 +1,6 @@
 {
   "name": "pull-redux",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "use redux as a pull-stream",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "redux",
     "frp"
   ],
-  "author": "Mikey <michael.williams@enspiral.com> (http://dinosaur.os)",
+  "author": "Mikey <michael.williams@enspiral.com> (http://dinosaur.is)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ahdinosaur/pull-redux/issues"
