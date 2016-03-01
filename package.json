@@ -1,0 +1,33 @@
+{
+  "name": "pull-redux",
+  "version": "0.0.0",
+  "description": "use redux as a pull-stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahdinosaur/pull-redux.git"
+  },
+  "keywords": [
+    "pull",
+    "stream",
+    "redux",
+    "frp"
+  ],
+  "author": "Mikey <michael.williams@enspiral.com> (http://dinosaur.os)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahdinosaur/pull-redux/issues"
+  },
+  "homepage": "https://github.com/ahdinosaur/pull-redux#readme",
+  "dependencies": {
+    "pull-pushable": "^2.0.0",
+    "pull-stream": "^3.2.0"
+  },
+  "devDependencies": {
+    "redux": "^3.3.1",
+    "tape": "^4.4.0"
+  }
+}
