@@ -10,7 +10,7 @@ function pullRedux (store) {
     var drainer
 
     var stream = Pushable(function (err) {
-      if (err) { drainer.abort(err) }
+      drainer.abort(err)
       unsubscribe()
     })
 
