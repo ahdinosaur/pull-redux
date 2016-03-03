@@ -5,6 +5,8 @@ var createStore = require('redux').createStore
 var pullRedux = require('../')
 
 test('it works', function (t) {
+  t.plan(3)
+
   var expectedAction = { type: 'hello' }
   var expectedState = { mind: 'ful' }
   var store = createStore(function (state, actualAction) {
@@ -19,7 +21,6 @@ test('it works', function (t) {
     pullRedux(store),
     pull.drain(function (actualState) {
       t.equal(actualState, expectedState, 'actual state is expected state')
-      t.end()
     })
   )
 })

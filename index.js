@@ -14,6 +14,9 @@ function pullRedux (store) {
       unsubscribe()
     })
 
+    // push current state
+    stream.push(store.getState())
+
     // listen to state changes
     unsubscribe = store.subscribe(function () {
       stream.push(store.getState())
