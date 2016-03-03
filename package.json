@@ -1,6 +1,6 @@
 {
   "name": "pull-redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "use redux as a pull-stream",
   "main": "index.js",
   "scripts": {
