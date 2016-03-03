@@ -6,19 +6,27 @@ module.exports = pullRedux
 
 function pullRedux (store) {
   return function (read) {
-    var stream = Pushable()
+    var unsubscribe
+    var drainer
+
+    var stream = Pushable(function (err) {
+      if (err) { drainer.abort(err) }
+      unsubscribe()
+    })
 
     // listen to state changes
-    store.subscribe(function () {
+    unsubscribe = store.subscribe(function () {
       stream.push(store.getState())
     })
 
     // read new actions
+    drainer = drain(function (action) {
+      store.dispatch(action)
+    })
+
     pull(
       read,
-      drain(function (action) {
-        store.dispatch(action)
-      })
+      drainer
     )
 
     return stream
